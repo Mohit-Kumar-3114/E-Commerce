@@ -306,7 +306,7 @@ const updateOrderStatus = async (req, res) => {
 
 
 
-module.exports = { placeOrderCOD, getUserOrders, allOrders, updateOrderStatus, placeOrderRazorpay, verifyRazorpay }
+module.exports = { placeOrderCOD, getUserOrders, allOrders, updateOrderStatus }
 
 
 
