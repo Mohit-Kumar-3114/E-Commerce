@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { toast } from 'react-toastify'
 import '../style/Login.css'
+import { backendUrl } from '../App'
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState('')
@@ -9,7 +10,7 @@ const Login = ({ setToken }) => {
   const onSubmitHandler = async (e) => {
     e.preventDefault()
     try {
-        const response = await fetch("http://localhost:3000/api/v1/admin-login",
+        const response = await fetch(`${backendUrl}/api/v1/admin-login`,
             {
                 method: "POST",
                 headers: {
