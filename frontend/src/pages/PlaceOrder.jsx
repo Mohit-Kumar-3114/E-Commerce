@@ -76,6 +76,10 @@ const PlaceOrder = () => {
     }
 
     if(method === 'cod'){
+      if(!formData.email || !formData.street || !formData.city || !formData.state || !formData.zipcode || !formData.country || !formData.phone){
+        toast.error("Please fill all the fields")
+        return
+      }
 
     try{
       const address = `${formData.street}, ${formData.city}, ${formData.state} - ${formData.zipcode}, ${formData.country}`
